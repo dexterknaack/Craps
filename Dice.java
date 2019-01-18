@@ -21,10 +21,11 @@ public class Dice
         die2 = new Die();
     }
 
-    public int roll()
+    public int[] roll()
     {
         die1.roll();
         die2.roll();
-        return die1.get() + die2.get();
+        int[] result = {die1.get(), die2.get()};
+        return result;
     }
 }
