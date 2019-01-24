@@ -24,7 +24,9 @@ public class Dice
     public int[] roll()
     {
         die1.roll();
+        System.out.println(die1);
         die2.roll();
+        System.out.println(die2);
         int[] result = {die1.get(), die2.get()};
         return result;
     }

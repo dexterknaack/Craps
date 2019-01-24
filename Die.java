@@ -27,7 +27,7 @@ public class Die
      */
     public void roll()
     {
-        side = rnd.nextInt(5)+1;
+        side = rnd.nextInt(6)+1;
     }
     
     /**
@@ -38,5 +38,42 @@ public class Die
     public int get()
     {
         return side;
+    }
+    
+    public String toString()
+    {
+        String toReturn = "";
+        //row 1
+        toReturn += "+-----------+\n";
+        //row 2
+        //toReturn += "|           |\n";
+        //row 3
+        toReturn += "|  "; 
+        if(side > 1){toReturn += "o";}else{toReturn += " ";}
+        toReturn += "     ";
+        if(side > 3){toReturn += "o";}else{toReturn += " ";}
+        toReturn += "  |\n";
+        //row 4
+        //toReturn += "|           |\n";
+        //row 5
+        toReturn += "|  "; 
+        if(side == 6){toReturn += "o";}else{toReturn += " ";}
+        toReturn += "  ";
+        if(side == 3||side == 5||side == 1){toReturn += "o";}else{toReturn += " ";}
+        toReturn += "  ";
+        if(side == 6){toReturn += "o";}else{toReturn += " ";}
+        toReturn += "  |\n";
+        //row 6
+        //toReturn += "|           |\n";
+        //row 7
+        toReturn += "|  ";
+        if(side > 3){toReturn += "o";}else{toReturn += " ";}
+        toReturn += "     ";
+        if(side > 1){toReturn += "o";}else{toReturn += " ";}
+        toReturn += "  |\n";
+        //row 8
+        toReturn += "+-----------+\n";
+        
+        return toReturn;
     }
 }
